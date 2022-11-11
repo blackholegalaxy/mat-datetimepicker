@@ -22,7 +22,10 @@
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
             "tsConfig": "src/tsconfig.app.json",
-            "assets": ["src/favicon.ico", "src/assets"],
+            "assets": [
+              "src/favicon.ico",
+              "src/assets"
+            ],
             "styles": [
               "./node_modules/@angular/material/prebuilt-themes/indigo-pink.css",
               "src/styles.scss"
@@ -84,13 +87,19 @@
               "src/styles.scss"
             ],
             "scripts": [],
-            "assets": ["src/favicon.ico", "src/assets"]
+            "assets": [
+              "src/favicon.ico",
+              "src/assets"
+            ]
           }
         },
         "lint": {
           "builder": "@angular-eslint/builder:lint",
           "options": {
-            "lintFilePatterns": ["src/**/*.ts", "src/**/*.html"]
+            "lintFilePatterns": [
+              "src/**/*.ts",
+              "src/**/*.html"
+            ]
           }
         },
         "deploy": {
@@ -124,7 +133,10 @@
         "lint": {
           "builder": "@angular-eslint/builder:lint",
           "options": {
-            "lintFilePatterns": ["e2e//**/*.ts", "e2e//**/*.html"]
+            "lintFilePatterns": [
+              "e2e//**/*.ts",
+              "e2e//**/*.html"
+            ]
           }
         }
       }
@@ -198,6 +210,43 @@
             "lintFilePatterns": [
               "projects/moment/**/*.ts",
               "projects/moment/**/*.html"
+            ]
+          }
+        }
+      }
+    },
+    "dayjs": {
+      "root": "projects/dayjs",
+      "sourceRoot": "projects/dayjs/src",
+      "projectType": "library",
+      "prefix": "lib",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:ng-packagr",
+          "options": {
+            "tsConfig": "projects/dayjs/tsconfig.lib.json",
+            "project": "projects/dayjs/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "tsConfig": "projects/dayjs/tsconfig.lib.prod.json"
+            }
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/dayjs/src/test.ts",
+            "tsConfig": "projects/dayjs/tsconfig.spec.json",
+            "karmaConfig": "projects/dayjs/karma.conf.js"
+          }
+        },
+        "lint": {
+          "builder": "@angular-eslint/builder:lint",
+          "options": {
+            "lintFilePatterns": [
+              "projects/dayjs/**/*.ts",
+              "projects/dayjs/**/*.html"
             ]
           }
         }

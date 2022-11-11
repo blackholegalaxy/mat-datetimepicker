@@ -1,0 +1,18 @@
+{
+  "name": "@mat-datetimepicker/dayjs",
+  "version": "10.0.10",
+  "repository": "https://github.com/kuhnroyal/mat-datetimepicker.git",
+  "author": "PL <kuhnroyal@gmail.com>",
+  "license": "MIT",
+  "peerDependencies": {
+    "@angular/cdk": "^14.0.4",
+    "@angular/common": "^14.0.5",
+    "@angular/core": "^14.0.5",
+    "@angular/material": "^14.0.4",
+    "@tabuckner/material-dayjs-adapter": "^2.0.0",
+    "@mat-datetimepicker/core": "^10.0.0"
+  },
+  "dependencies": {
+    "tslib": "^2.4.0"
+  }
+}
